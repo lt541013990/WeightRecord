@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  WeightRecords
+//
+//  Created by lt on 16/11/21.
+//  Copyright © 2016年 lt. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIColorExtend.h"
+#import "UIView+SetRect.h"
+#import "FMDB.h"
+#import "WeightMode.h"
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define space ((SCREEN_WIDTH - 60 - 30) / (7 - 1))
+
+#define LOCALPATH [NSHomeDirectory() stringByAppendingString:@"/Documents"]
+
+#endif /* PrefixHeader_pch */
