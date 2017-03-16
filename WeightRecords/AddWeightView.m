@@ -73,7 +73,15 @@
     
     self.dateStr = [formatter stringFromDate:self.datePicker.date];
     
-    self.weightStr = self.weightField.text;
+    double weight = [self.weightField.text doubleValue];
+    if (weight > (int)weight)
+    {
+        self.weightStr = [NSString stringWithFormat:@"%.1f",weight];
+    }else
+    {
+        self.weightStr = [NSString stringWithFormat:@"%d",(int)weight];
+    }
+
     if ([self.weightStr isEqualToString:@""] || !self.weightStr)
     {
         self.weightStr = @"0";
@@ -83,11 +91,6 @@
     
     [self.delegate redrawChart];
     [self dismiss];
-    
-    NSMutableString *father = [NSMutableString stringWithString:@"123"];
-    NSMutableString *son = [father mutableCopy];
-    [son appendString:@"added"];
-    NSLog(@"%@",son);
 }
 
 #pragma mark - delegate
@@ -108,23 +111,15 @@
     NSInteger limited = 1;      // 小数点后面限制的位数
     BOOL hasPoint = NO;         // 判断是否已经输入了点
     
-//    for (NSInteger i = 0; i < str.length; i++)
-//    {
-//        if ([str characterAtIndex:i] == '.')
-//        {
-//            // 如果已经有一个点了 就返回NO  如果没有 则继续走 把hasPoint设置为YES
-//            if (hasPoint == YES)
-//            {
-//                return NO;
-//            }
-//            hasPoint = YES;
-//        }
-//    }
-    
     for (int i = (int)(str.length - 1); i >= 0; i--)
     {
         if ([str characterAtIndex:i] == '.')
         {
+            // 如果小数点在第一位
+            if (i == 0)
+            {
+                return NO;
+            }
             // 如果已经有一个点了 就返回NO  如果没有 则继续走 把hasPoint设置为YES
             if (hasPoint == YES)
             {
@@ -136,8 +131,6 @@
             {
                 return NO;
             }
-            
-//            break;
         }else
         {
             flag ++;
@@ -145,9 +138,14 @@
  
     }
     
-    NSLog(@"YES");
+//    NSInteger weight = [textField.text integerValue];
+//    if (weight > 99)
+//    {
+//        return NO;
+//    }
     return YES;
 }
+
 
 #pragma mark - Lazy
 
@@ -190,7 +188,6 @@
         _weightField.keyboardType = UIKeyboardTypeDecimalPad;
         _weightField.keyboardAppearance = UIKeyboardAppearanceAlert;
         _weightField.borderStyle = UITextBorderStyleRoundedRect;
-//        _weightField.clearButtonMode = UITextFieldViewModeAlways;
         _weightField.textAlignment = NSTextAlignmentCenter;
         _weightField.textColor = [UIColor flatRedColor];
         
