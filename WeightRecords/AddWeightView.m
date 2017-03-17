@@ -43,10 +43,7 @@
 
 - (void)show
 {
-    
     self.alpha = 0;
-
-    
     [UIView animateWithDuration:.3f animations:^{
         
         self.alpha = 0.95;
@@ -138,11 +135,11 @@
  
     }
     
-//    NSInteger weight = [textField.text integerValue];
-//    if (weight > 99)
-//    {
-//        return NO;
-//    }
+    NSInteger weight = [str integerValue];
+    if (weight > 99)
+    {
+        return NO;
+    }
     return YES;
 }
 
@@ -192,8 +189,13 @@
         _weightField.textColor = [UIColor flatRedColor];
         
         [[_weightField valueForKey:@"textInputTraits"] setValue:[UIColor clearColor] forKey:@"insertionPointColor"];
-        
         _weightField.delegate = self;
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+        label.font = [UIFont systemFontOfSize:30];
+        label.text = @"KG";
+        _weightField.rightView = label;
+        _weightField.rightViewMode = UITextFieldViewModeAlways;
     }
     return _weightField;
 }
