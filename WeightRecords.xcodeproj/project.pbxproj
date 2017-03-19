@@ -35,7 +35,6 @@
 		695A60C61DE284640091BCDD /* UIImageExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 695A60C51DE284640091BCDD /* UIImageExtend.m */; };
 		695A60C91DE285B60091BCDD /* NSStringExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 695A60C81DE285B60091BCDD /* NSStringExtend.m */; };
 		695A60CF1DE29E750091BCDD /* FoldLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695A60CE1DE29E750091BCDD /* FoldLineView.m */; };
-		695A60EB1DE2D6E40091BCDD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 695A60D11DE2D6E40091BCDD /* Info.plist */; };
 		695A60EC1DE2D6E40091BCDD /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 695A60D31DE2D6E40091BCDD /* MASCompositeConstraint.m */; };
 		695A60ED1DE2D6E40091BCDD /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 695A60D61DE2D6E40091BCDD /* MASConstraint.m */; };
 		695A60EE1DE2D6E40091BCDD /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 695A60D81DE2D6E40091BCDD /* MASConstraintMaker.m */; };
@@ -86,10 +85,8 @@
 		694213611DDEEB610019D002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694213661DDEEB610019D002 /* WeightRecordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeightRecordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6942136A1DDEEB610019D002 /* WeightRecordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeightRecordsTests.m; sourceTree = "<group>"; };
-		6942136C1DDEEB610019D002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694213711DDEEB610019D002 /* WeightRecordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeightRecordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		694213751DDEEB610019D002 /* WeightRecordsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeightRecordsUITests.m; sourceTree = "<group>"; };
-		694213771DDEEB610019D002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694213841DDEF3C90019D002 /* UIView+SetRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SetRect.h"; sourceTree = "<group>"; };
 		694213851DDEF3C90019D002 /* UIView+SetRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SetRect.m"; sourceTree = "<group>"; };
 		694213881DDEF3FB0019D002 /* AppColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppColor.h; sourceTree = "<group>"; };
@@ -121,7 +118,6 @@
 		695A60CB1DE28F1F0091BCDD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		695A60CD1DE29E750091BCDD /* FoldLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldLineView.h; sourceTree = "<group>"; };
 		695A60CE1DE29E750091BCDD /* FoldLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldLineView.m; sourceTree = "<group>"; };
-		695A60D11DE2D6E40091BCDD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		695A60D21DE2D6E40091BCDD /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		695A60D31DE2D6E40091BCDD /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		695A60D41DE2D6E40091BCDD /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -255,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				6942136A1DDEEB610019D002 /* WeightRecordsTests.m */,
-				6942136C1DDEEB610019D002 /* Info.plist */,
 			);
 			path = WeightRecordsTests;
 			sourceTree = "<group>";
@@ -264,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				694213751DDEEB610019D002 /* WeightRecordsUITests.m */,
-				694213771DDEEB610019D002 /* Info.plist */,
 			);
 			path = WeightRecordsUITests;
 			sourceTree = "<group>";
@@ -364,7 +358,6 @@
 		695A60D01DE2D6E40091BCDD /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				695A60D11DE2D6E40091BCDD /* Info.plist */,
 				695A60D21DE2D6E40091BCDD /* MASCompositeConstraint.h */,
 				695A60D31DE2D6E40091BCDD /* MASCompositeConstraint.m */,
 				695A60D41DE2D6E40091BCDD /* MASConstraint+Private.h */,
@@ -508,7 +501,6 @@
 				6918FE981DE828C90058136E /* icon3x.png in Resources */,
 				6918FE971DE828C90058136E /* icon2x.png in Resources */,
 				6942135D1DDEEB610019D002 /* Assets.xcassets in Resources */,
-				695A60EB1DE2D6E40091BCDD /* Info.plist in Resources */,
 				6918FE921DE827C60058136E /* add_blue.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSInteger{
+    ChartModeWeek,
+    ChartModeMonth,
+    ChartModeYear
+}ChartMode;
+
 @interface ChartView : UIView
 
-
+- (id)initWithFrame:(CGRect)frame mode:(ChartMode) mode;
 
 - (void)showChart;
+
+@property (nonatomic, assign) ChartMode chartMode;
 
 @end

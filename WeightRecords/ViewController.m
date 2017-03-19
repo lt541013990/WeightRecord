@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) CSegmentedControl *dateModeSegment;
 
-@property (nonatomic, strong) ChartView *chartView;
+@property (nonatomic, strong) ChartView *weekChartView;
 
 @property (nonatomic, strong) UIButton *addNewWeightBtn;
 
@@ -30,15 +30,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"1");
     [SQLManager createLocalDB];
     NSLog(@"%@",LOCALPATH);
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.dateModeSegment];
     [self.view addSubview:self.addNewWeightBtn];
-    [self.view addSubview:self.chartView];
-    [self.chartView showChart];
+    [self.view addSubview:self.weekChartView];
+    [self.weekChartView showChart];
     
 }
 
@@ -72,7 +71,7 @@
 
 - (void)redrawChart
 {
-    [self.chartView showChart];
+    [self.weekChartView showChart];
 }
 
 
@@ -92,13 +91,13 @@
 
 }
 
-- (ChartView *)chartView
+- (ChartView *)weekChartView
 {
-    if (!_chartView)
+    if (!_weekChartView)
     {
-        _chartView = [[ChartView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 240)];
+        _weekChartView = [[ChartView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH, 240) mode:ChartModeWeek];
     }
-    return _chartView;
+    return _weekChartView;
 
 }
 

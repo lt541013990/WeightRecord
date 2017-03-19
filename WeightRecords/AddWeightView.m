@@ -94,7 +94,6 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    //点击屏幕的时候就结束编辑，方便又快捷
     [self endEditing:YES];//结束编辑
 }
 
@@ -136,7 +135,8 @@
     }
     
     NSInteger weight = [str integerValue];
-    if (weight > 99)
+    // 限制最大体重为200KG
+    if (weight > 200)
     {
         return NO;
     }
