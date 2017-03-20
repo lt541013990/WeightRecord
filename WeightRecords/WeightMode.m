@@ -16,10 +16,9 @@
     {
         _name = name;
         _weight = weight;
-        
         // 此时date格式为 yyyy-mm-dd 修改成mm/dd
-        _date = [date substringFromIndex:5];
-        _date = [_date stringByReplacingOccurrencesOfString:@"-" withString:@"/"];
+//        _date = [date substringFromIndex:5];
+        _date = [_date stringByReplacingOccurrencesOfString:@"-" withString:@""];
     }
     return self;
 }

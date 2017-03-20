@@ -14,6 +14,6 @@
 
 + (BOOL)addWeight:(NSString *)weight date:(NSString *)date name:(NSString *)userName;           /**< 向本地表里面添加体重日期等数据 */
 
-+ (NSArray *)queryWeight;
++ (NSArray *)getWholeWeight;
 
 @end

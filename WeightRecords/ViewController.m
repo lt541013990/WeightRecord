@@ -38,7 +38,6 @@
     [self.view addSubview:self.addNewWeightBtn];
     [self.view addSubview:self.weekChartView];
     [self.weekChartView showChart];
-    
 }
 
 

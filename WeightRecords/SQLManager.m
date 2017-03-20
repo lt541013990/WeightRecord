@@ -81,7 +81,12 @@ const NSString *sql_date = @"weight_date";
     return NO;
 }
 
-+ (NSArray *)queryWeight
+/**
+ *  获取数据库所有体重
+ *
+ *  @return array
+ */
++ (NSArray *)getWholeWeight
 {
     FMDatabase *db = [SQLManager db];
     NSMutableArray *weightArr = [NSMutableArray array];

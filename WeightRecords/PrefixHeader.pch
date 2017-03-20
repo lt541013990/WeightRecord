@@ -16,6 +16,9 @@
 #import "UIView+SetRect.h"
 #import "FMDB.h"
 #import "WeightMode.h"
+#import "WeightDataManager.h"
+#import "SQLManager.h"
+
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)

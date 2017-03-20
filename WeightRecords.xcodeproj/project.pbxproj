@@ -31,6 +31,7 @@
 		694716F71DE5449A00EE13CE /* SQLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 694716F61DE5449A00EE13CE /* SQLManager.m */; };
 		694716FA1DE548D700EE13CE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 694716F91DE548D700EE13CE /* libsqlite3.0.tbd */; };
 		694716FC1DE548E100EE13CE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 694716FB1DE548E100EE13CE /* libsqlite3.tbd */; };
+		694E0F681E7F87BD00125B66 /* WeightDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 694E0F671E7F87BD00125B66 /* WeightDataManager.m */; };
 		695A60C31DE283080091BCDD /* UIColorExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 695A60C21DE283080091BCDD /* UIColorExtend.m */; };
 		695A60C61DE284640091BCDD /* UIImageExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 695A60C51DE284640091BCDD /* UIImageExtend.m */; };
 		695A60C91DE285B60091BCDD /* NSStringExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 695A60C81DE285B60091BCDD /* NSStringExtend.m */; };
@@ -109,6 +110,8 @@
 		694716F61DE5449A00EE13CE /* SQLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLManager.m; sourceTree = "<group>"; };
 		694716F91DE548D700EE13CE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		694716FB1DE548E100EE13CE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		694E0F661E7F87BD00125B66 /* WeightDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightDataManager.h; sourceTree = "<group>"; };
+		694E0F671E7F87BD00125B66 /* WeightDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightDataManager.m; sourceTree = "<group>"; };
 		695A60C11DE283080091BCDD /* UIColorExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorExtend.h; sourceTree = "<group>"; };
 		695A60C21DE283080091BCDD /* UIColorExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorExtend.m; sourceTree = "<group>"; };
 		695A60C41DE284640091BCDD /* UIImageExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtend.h; sourceTree = "<group>"; };
@@ -220,20 +223,22 @@
 			children = (
 				694213531DDEEB610019D002 /* AppDelegate.h */,
 				694213541DDEEB610019D002 /* AppDelegate.m */,
+				694E0F661E7F87BD00125B66 /* WeightDataManager.h */,
+				694E0F671E7F87BD00125B66 /* WeightDataManager.m */,
 				694213561DDEEB610019D002 /* ViewController.h */,
 				694213571DDEEB610019D002 /* ViewController.m */,
-				6942135C1DDEEB610019D002 /* Assets.xcassets */,
-				6942135E1DDEEB610019D002 /* LaunchScreen.storyboard */,
-				694213611DDEEB610019D002 /* Info.plist */,
 				693B70AD1DE42F2C00B9B280 /* WeightView */,
 				6942138C1DDF01FA0019D002 /* UI */,
-				694213871DDEF3E20019D002 /* Color */,
 				694716F41DE5431A00EE13CE /* SqlManager */,
 				694213831DDEF3B70019D002 /* SetRect */,
 				695A60CC1DE29E450091BCDD /* Chart */,
+				6942135C1DDEEB610019D002 /* Assets.xcassets */,
+				6942135E1DDEEB610019D002 /* LaunchScreen.storyboard */,
+				694213611DDEEB610019D002 /* Info.plist */,
 				694213501DDEEB610019D002 /* Supporting Files */,
 				695A60D01DE2D6E40091BCDD /* Masonry */,
 				694716E31DE5401B00EE13CE /* FMDB */,
+				694213871DDEF3E20019D002 /* Color */,
 				695A60CA1DE28F050091BCDD /* OtherSource */,
 			);
 			path = WeightRecords;
@@ -533,6 +538,7 @@
 				6942138B1DDEF3FB0019D002 /* NSString+Color.m in Sources */,
 				695A60C61DE284640091BCDD /* UIImageExtend.m in Sources */,
 				694213551DDEEB610019D002 /* AppDelegate.m in Sources */,
+				694E0F681E7F87BD00125B66 /* WeightDataManager.m in Sources */,
 				695A60F51DE2D6E40091BCDD /* ViewController+MASAdditions.m in Sources */,
 				694716EF1DE5402400EE13CE /* FMDatabase.m in Sources */,
 				695A60F01DE2D6E40091BCDD /* MASViewAttribute.m in Sources */,
