@@ -14,13 +14,13 @@
 /**
  纵坐标数据
  */
-@property (nonatomic, strong) NSMutableArray *yArr;
+@property (nonatomic, strong) NSArray *yArr;
 
 
 /**
  横坐标数据
  */
-@property (nonatomic, strong) NSMutableArray *xArr;
+@property (nonatomic, strong) NSArray *xArr;
 
 - (void)draw;
 

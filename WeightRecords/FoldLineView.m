@@ -72,7 +72,13 @@
     self.pointArr = [NSMutableArray array];
     for (int i = 0; i < self.xArr.count; i++)
     {
-        [self.pointArr addObject:[NSString stringWithFormat:@"%f",[self.yArr[i] floatValue] / maxY]];
+        if ([self.yArr[i] isEqualToString:@""])
+        {
+            [self.pointArr addObject:@""];
+        }else
+        {
+            [self.pointArr addObject:[NSString stringWithFormat:@"%f",[self.yArr[i] floatValue] / maxY]];
+        }
     }
     
     // 添加平行Y轴的七根线
@@ -98,16 +104,21 @@
     
     // 根据点划线
     UIBezierPath *path = [UIBezierPath bezierPath];
-    
+    BOOL hasStartDraw = NO;
     for (int i = 0; i < self.xArr.count; i++)
     {
-        if (i == 0)
+        if ([self.pointArr[i] isEqualToString:@""])
         {
-            // 第一个点加9 为了让点在最中间
-            [path moveToPoint:CGPointMake(20 + 9, 4 + 170 * (1 - [self.pointArr[0] floatValue]))];
+            continue;
+        }
+        
+        if (hasStartDraw == NO)
+        {
+            hasStartDraw = YES;
+            [path moveToPoint:CGPointMake(20 + 9 + space*i, 4 + 170 * (1 - [self.pointArr[i] floatValue]))];
         }else
         {
-            [path addLineToPoint:CGPointMake(20 + space * i + 9, 4 + 170 * (1 - [self.pointArr[i] floatValue]))];
+            [path addLineToPoint:CGPointMake(20 + space*i + 9, 4 + 170 * (1 - [self.pointArr[i] floatValue]))];
         }
         
     }
@@ -129,6 +140,11 @@
     // 根据坐标绘制点
     for (int i = 0; i < self.xArr.count; i++)
     {
+        if ([self.pointArr[i] isEqualToString:@""])
+        {
+            continue;
+        }
+        
         CGFloat pointY = [self.pointArr[i] floatValue];
         UIView *pointView = [[UIView alloc] initWithFrame:CGRectMake(20 + i * space + 5.5, 170 * (1 - pointY), 7, 7)];
         pointView.centerX = 20 + i * space + 9.5;

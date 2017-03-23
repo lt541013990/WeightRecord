@@ -12,4 +12,10 @@
 
 + (NSString *)getCurrentWeekMonday;
 
++ (NSArray *)getCurrentWeekData;
+
++ (NSArray *)getCurrentWeekDate;
+
+
+
 @end

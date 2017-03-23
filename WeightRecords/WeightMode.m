@@ -10,15 +10,16 @@
 
 @implementation WeightMode
 
-- (id)initWithName:(NSString *)name weight:(NSString *)weight date:(NSString *)date
+- (id)initWithName:(NSString *)name weight:(NSString *)weight date:(NSString *)datestr
 {
     if (self = [super init])
     {
         _name = name;
         _weight = weight;
-        // 此时date格式为 yyyy-mm-dd 修改成mm/dd
-//        _date = [date substringFromIndex:5];
-        _date = [_date stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        _date = [datestr stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        
+        _showDate = [datestr substringFromIndex:5];
+        _showDate = [_showDate stringByReplacingOccurrencesOfString:@"-" withString:@"/"];
     }
     return self;
 }

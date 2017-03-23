@@ -15,9 +15,9 @@
 
 @property (nonatomic, strong) FoldLineView *foldLineView;
 
-@property (nonatomic, strong) NSMutableArray *xArr;
+@property (nonatomic, strong) NSArray *xArr;
 
-@property (nonatomic, strong) NSMutableArray *yArr;
+@property (nonatomic, strong) NSArray *yArr;
 
 @end
 
@@ -71,39 +71,27 @@
 
 }
 
-- (NSMutableArray *)xArr
+- (NSArray *)xArr
 {
-    if (!_xArr)
-    {
-        _xArr = [NSMutableArray array];
-    }
     // x的数据源
-    NSArray *arr = [SQLManager getWholeWeight];
-    [_xArr removeAllObjects];
-    
-    for (WeightMode *mode in arr)
+    NSMutableArray *xArr = [NSMutableArray array];
+    NSArray *arr = [WeightDataManager getCurrentWeekDate];
+    NSDateFormatter *toStringFormatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter *toDateFormatter = [[NSDateFormatter alloc] init];
+    [toStringFormatter setDateFormat:@"MM/dd"];
+    [toDateFormatter setDateFormat:@"yyyyMMdd"];
+    for (NSString *dateStr in arr)
     {
-        [_xArr addObject:mode.date];
+        NSString * str = [toStringFormatter stringFromDate: [toDateFormatter dateFromString:dateStr]];
+        [xArr addObject:str];
     }
-    
+    _xArr = xArr;
     return _xArr;
 }
 
-- (NSMutableArray *)yArr
+- (NSArray *)yArr
 {
-    if (!_yArr)
-    {
-        // y的数据源
-        _yArr =[NSMutableArray array];
-    }
-    NSArray *arr = [SQLManager getWholeWeight];
-    [_yArr removeAllObjects];
-    
-    for (WeightMode *mode in arr)
-    {
-        [_yArr addObject:mode.weight];
-    }
-    
+    _yArr = [WeightDataManager getCurrentWeekData];
     return _yArr;
 }
 
